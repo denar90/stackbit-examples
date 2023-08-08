@@ -4,3 +4,9 @@
 [build]
   publish = ".next"
   command = "npm run build"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "production"
