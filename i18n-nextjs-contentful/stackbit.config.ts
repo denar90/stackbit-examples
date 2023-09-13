@@ -47,6 +47,16 @@ const config = defineStackbitConfig({
     models = models.map(markLocalizedModel);
     return models;
   },
+  actions: [
+    {
+      type: 'bulk',
+      name: 'name_of_action',
+      run: async (options) => {
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+      },
+      // Other options ...
+    },
+  ],
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
     const entries: SiteMapEntry[] = pages.flatMap((document) => {
