@@ -39,7 +39,7 @@ const modelExtensions: ModelExtension[] = pageModelExtensions.concat([
 const config = defineStackbitConfig({
   stackbitVersion: '~0.6.0',
   ssgName: 'nextjs',
-  nodeVersion: '18',
+  nodeVersion: 18,
   contentSources: [contentSource],
   actions: [
     {
