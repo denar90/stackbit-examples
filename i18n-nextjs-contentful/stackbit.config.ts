@@ -41,12 +41,6 @@ const config = defineStackbitConfig({
   ssgName: 'nextjs',
   nodeVersion: '16',
   contentSources: [contentSource],
-  modelExtensions: modelExtensions,
-  onDocumentCreate: LocalizedDocumentCreateHook,
-  mapModels: ({ models }) => {
-    models = models.map(markLocalizedModel);
-    return models;
-  },
   actions: [
     {
       type: 'bulk',
@@ -57,6 +51,12 @@ const config = defineStackbitConfig({
       // Other options ...
     },
   ],
+  modelExtensions: modelExtensions,
+  onDocumentCreate: LocalizedDocumentCreateHook,
+  mapModels: ({ models }) => {
+    models = models.map(markLocalizedModel);
+    return models;
+  },
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
     const entries: SiteMapEntry[] = pages.flatMap((document) => {
