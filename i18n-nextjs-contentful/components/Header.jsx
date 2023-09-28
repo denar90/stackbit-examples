@@ -22,7 +22,7 @@ export const Header = ({ pageLocale, siteConfig, links }) => {
         </span>
       )}
       <span className="flex flex-grow gap-3 md:gap-5">
-        {sortedLinks.map(([label, url, locale]) => {
+        {sortedLinks?.map(([label, url, locale]) => {
           return (
             <Link key={url} href={url} locale={locale}>
               <span className="text-md">{label}</span>
