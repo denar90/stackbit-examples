@@ -12,7 +12,7 @@ function sortedLinksArray(links) {
 }
 
 export const Header = ({ pageLocale, siteConfig, links }) => {
-  let sortedLinks = sortedLinksArray(links);
+  let sortedLinks = [];
   const headerText = siteConfig?.headerText; // This value is field-localized
   return (
     <div className="bg-gray-800 text-white px-5 py-4 flex items-center gap-6 uppercase">
