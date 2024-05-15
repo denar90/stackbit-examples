@@ -12,7 +12,7 @@ function sortedLinksArray(links) {
 }
 
 export const Header = ({ pageLocale, siteConfig, links }) => {
-  let sortedLinks = sortedLinksArray(links);
+  let sortedLinks = [];
   const headerText = siteConfig?.headerText; // This value is field-localized
   return (
     <div className="bg-gray-800 text-white px-5 py-4 flex items-center gap-6 uppercase">
@@ -22,7 +22,7 @@ export const Header = ({ pageLocale, siteConfig, links }) => {
         </span>
       )}
       <span className="flex flex-grow gap-3 md:gap-5">
-        {sortedLinks.map(([label, url, locale]) => {
+        {sortedLinks?.map(([label, url, locale]) => {
           return (
             <Link key={url} href={url} locale={locale}>
               <span className="text-md">{label}</span>
