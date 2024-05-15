@@ -1,0 +1,30 @@
+{
+    "model": "hero",
+    "srcType": "contentful",
+    "srcProjectId": "pzfemjaryfsw",
+    "presets": [
+        {
+            "label": "12312",
+            "locale": "es",
+            "metadata": {
+                "categories": [
+                    "123"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "heading": "¿Puedes hacer el sándwich perfecto?",
+                "body": "HandSandwich™️ es la clase de elaboración de sándwiches con mayor asistencia del centro suroeste de Ohio. No retrase su habilidad para elaborar el sándwich perfecto.123123\n",
+                "image": null,
+                "button": {
+                    "$$ref": "7xFrOJCDthKytTTpJQuiQl",
+                    "$$type": "button"
+                },
+                "theme": "imgLeft",
+                "locale": "es",
+                "refId": null
+            },
+            "thumbnail": "images/hero-12312-7b8d.png"
+        }
+    ]
+}
